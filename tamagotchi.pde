@@ -47,6 +47,10 @@ void draw() {
  fill(0); //couleur pupille
  ellipse(-25,-30,5,5);
  ellipse(20,-30,5,5);
+ 
+ 
+  fill(255); //bouche
+ ellipse(0,15,random(15,20),random(10,20));
    
   
   }else{
