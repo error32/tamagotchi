@@ -53,8 +53,8 @@ void draw() {
  ellipse(random(19,20),-random(29,30),20,15);//Enfin, gérer la taille des yeux quoi ...
  
  fill(0); //couleur pupille
- ellipse(-25,-30,5,5);
- ellipse(20,-30,5,5);
+ ellipse(-random(25,26),-random(29,30),5,5);
+ ellipse(random(20,21),-random(29,30),5,5);
  
  
  fill(255); //bouche
