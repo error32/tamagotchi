@@ -8,7 +8,7 @@ float rayon=200;
 float rayonProtected = 50;
 float side= random(1,200); //gérer le nombre de edge/pics
 
-
+//BITE
 
 boolean random=true;
 boolean debug=true;
