@@ -3,20 +3,28 @@ float noise=0;
 float speed= .015;
 float intSpeed = 0.5;
 float noiseScale=0.02;
-
-float rayon=200;
-float rayonProtected = 50;
 int side= (int)random(10,100); //gérer le nombre de edge/pics
+float rayon=200; //taille de stain
+float rayonProtected = 30; //si on veut une forme "plus ronde" il faut changer cette valeur vers le haut
+
 
 boolean random=true;
 boolean debug=true;
 boolean mvt=true;
-boolean save=false;//attention va enregistrer une sequence d'image si save = true
+boolean save=false;//attention va enregistrer une sequence d'image si save = true en .tif
 float time=0;
 
+
+//New valeurs tamago
+int temperature;
+int son;
+int pollution;
+
+//Pour les besoin de couleur random
 float red;
 float green;
 float blue;
+
 
 ArrayList<polygon> polygons;
 
@@ -42,14 +50,14 @@ void draw() {
      
  fill(255); //yeux
  ellipse(-random(25,26),-random(29,30),20,15);//Gère le random pour lui donner peur
- ellipse(random(19,20),-random(29,30),20,15);
+ ellipse(random(19,20),-random(29,30),20,15);//Enfin, gérer la taille des yeux quoi ...
  
  fill(0); //couleur pupille
  ellipse(-25,-30,5,5);
  ellipse(20,-30,5,5);
  
  
-  fill(255); //bouche
+ fill(255); //bouche
  ellipse(0,15,random(15,20),random(10,20));
    
   
