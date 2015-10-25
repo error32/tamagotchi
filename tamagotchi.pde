@@ -6,9 +6,8 @@ float intSpeed = 0.5;
 
 float rayon=200;
 float rayonProtected = 50;
-float side= random(1,200); //gérer le nombre de edge/pics
+float side= random(20,70); //gérer le nombre de edge/pics
 
-//BITE
 
 boolean random=true;
 boolean debug=true;
@@ -36,6 +35,10 @@ void setup() {
 }
 
 void draw() {
+  
+
+  
+  
   println(time);
   println(side);
   time++;
@@ -44,20 +47,36 @@ void draw() {
   translate(width/2, height/2);  
   if(mvt){
     polygons.get(0).shake().trace();
+ 
+    
+ fill(255);
+ ellipse(-30,-30,20,15);
+ ellipse(20,-30,20,15);
+ 
+ fill(0);
+ ellipse(-30,-30,5,5);
+ ellipse(20,-30,5,5);
+ 
+ 
+  
+  
   }else{
      polygons.get(0).trace();
   }
   
-  if(time==100){
-      side= random(1,200);
-      delay(200);
+
+  
+  
+  
+/*  if(time==100){
+      side= 10;
   }
   
  if(time==600){
-      side= random(1,200);
+      side= random(400);
   }
   
-    /*   if(time>300){
+   if(time>300){
       side= random(1,200);
   }
   
