@@ -2,10 +2,11 @@ float bezier;
 float noise=0;
 float speed= .015;
 float intSpeed = 0.5;
+float noiseScale=0.02;
 
 float rayon=200;
 float rayonProtected = 50;
-float side= random(20,70); //gérer le nombre de edge/pics
+int side= (int)random(10,100); //gérer le nombre de edge/pics
 
 boolean random=true;
 boolean debug=true;
@@ -38,12 +39,13 @@ void draw() {
   if(mvt){
     polygons.get(0).shake().trace();
      
- fill(255);
- ellipse(-30,-30,20,15);
- ellipse(20,-30,20,15);
+     
+ fill(255); //yeux
+ ellipse(-random(25,26),-random(29,30),20,15);//Gère le random pour lui donner peur
+ ellipse(random(19,20),-random(29,30),20,15);
  
- fill(0);
- ellipse(-30,-30,5,5);
+ fill(0); //couleur pupille
+ ellipse(-25,-30,5,5);
  ellipse(20,-30,5,5);
    
   
