@@ -1,12 +1,3 @@
-t(g-yhbgyèhg(tgg-gv
-
-
-ki,ik,*
-
-
-ok,ilkl
-
-
 float bezier;
 float noise=0;
 float speed= .015;
