@@ -94,10 +94,10 @@ class polygon {
       red=random(0,255);
       green=random(0,255);
       blue=random(0,255);
-      
+       noStroke(); 
       strokeWeight(0.5);
-      stroke(0);
-      fill(0); //l'humeur peut aussi être gérér par la couleur par la suite (red,green,blue)
+      //stroke(0);
+      fill(121,191,30); //l'humeur peut aussi être gérér par la couleur par la suite (red,green,blue)
     }
     else {
       strokeWeight(1);

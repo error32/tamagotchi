@@ -3,9 +3,9 @@ float noise=0;
 float speed= .015;
 float intSpeed = 0.5;
 float noiseScale=0.02;
-int side= (int)random(10,100); //gérer le nombre de edge/pics
+int side= (int)random(10,20); //gérer le nombre de edge/pics
 float rayon=200; //taille de stain
-float rayonProtected = 30; //si on veut une forme "plus ronde" il faut changer cette valeur vers le haut
+float rayonProtected = 75; //si on veut une forme "plus ronde" il faut changer cette valeur vers le haut
 
 
 boolean random=true;
@@ -33,6 +33,7 @@ void setup() {
   size(500, 500);
   frameRate(29);
   smooth();
+
   polygons = new ArrayList<polygon>();
   polygons.add(new polygon());
 }
@@ -41,24 +42,26 @@ void draw() {
   println(time);
   println(side);
   time++;
-  background(255);
+  background(200, 173, 127);
 
   translate(width/2, height/2);  
   if(mvt){
     polygons.get(0).shake().trace();
      
-     
+ noStroke();     
  fill(255); //yeux
- ellipse(-random(25,26),-random(29,30),20,15);//Gère le random pour lui donner peur
- ellipse(random(19,20),-random(29,30),20,15);//Enfin, gérer la taille des yeux quoi ...
+ ellipse(-25,-30,20,15);//Gère le random pour lui donner peur
+ ellipse(20,-30,20,15);//Enfin, gérer la taille des yeux quoi ...
  
  fill(0); //couleur pupille
- ellipse(-random(25,26),-random(29,30),5,5);
- ellipse(random(20,21),-random(29,30),5,5);
+ ellipse(-25,-30,5,5);
+ ellipse(20,-30,5,5);
  
- 
+
  fill(255); //bouche
- ellipse(0,15,random(15,20),random(10,20));
+ ellipse(0,15,45,20);
+ fill(121,191,30);
+ ellipse(0,0,45,20);
    
   
   }else{
