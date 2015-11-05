@@ -58,7 +58,7 @@ public void draw() {
   println(time);
   println(side);
   time++;
-  background(200, 173, 127);
+  background(255);
 
   translate(width/2, height/2);  
   if(mvt){
@@ -74,11 +74,13 @@ public void draw() {
  ellipse(20,-30,5,5);
  
 
+float rbouche;
+rbouche = random(15,17);
  fill(255); //bouche
  ellipse(0,15,45,20);
  fill(121,191,30);
- ellipse(0,0,45,20);
-   
+ ellipse(0,(rbouche)-10,45,20);
+
   
   }else{
      polygons.get(0).trace();
